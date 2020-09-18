@@ -1,0 +1,27 @@
+@extends('layouts.app')
+
+
+@section('content')
+      <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{asset('storage/img/home-bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Clean Blog</h1>
+            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+<div class="row">
+     <p>This is my body content. para el PERRO</p>
+</div>
+</div>
+<hr>
+@endsection
