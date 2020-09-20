@@ -9,7 +9,7 @@
     <title>Document</title>
     <!-- Custom styles for this template -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css.css" rel="stylesheet">
+    <link href="/css/login.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,30 +26,22 @@
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="form-label-group">
-
-                                        <!-- <input type="email" id="inputEmail" 
-                                            class="form-control" 
-                                            placeholder="Email address"
-                                             required autofocus>
-                                        <label for="inputEmail">Email address</label> -->
-                                        <input id="inputEmail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email address" value="{{ old('email') }}" required autocomplete="email" autofocus> @error('email')
-                                        <label for="inputEmail">Email address</label>
+                                    <input type="email" id="inputEmail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email address" required autocomplete="email" autofocus>
+                                    <label for="inputEmail">Email address</label>
+                                    @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span> @enderror
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                     </div>
-
                                     <div class="form-label-group">
-
-                                        <!--     <input type="password" id="inputPassword" 
-                                        class="form-control" placeholder="Password" required>
-                                        <label for="inputPassword">Password</label> -->
-                                        <input id="inputPassword" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"> @error('password')
-                                        <label for="inputPassword">Password</label>
+                                    <input type="password" id="inputPassword" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" required autocomplete="current-password">
+                                    <label for="inputPassword">Password</label>
+                                    @error('password')
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span> @enderror
-
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                     </div>
 
                                     <div class="custom-control custom-checkbox mb-3">

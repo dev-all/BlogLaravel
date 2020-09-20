@@ -9,7 +9,7 @@
     <title>Document</title>
     <!-- Custom styles for this template -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css.css" rel="stylesheet">
+    <link href="/css/register.css" rel="stylesheet">
 </head>
 
 <body>
