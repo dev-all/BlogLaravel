@@ -55,6 +55,7 @@
                                     </div>
 
                                     <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                                    
 
                                     <div class="text-center">
                                         <!--  <a class="small" href="#">Forgot password?</a> -->
@@ -63,6 +64,20 @@
                                             {{ __('Forgot Your Password?') }}
                                         </a> @endif
                                     </div>
+
+                                    <hr class="my-4">
+
+<!-- <a class="btn btn-lg btn-google btn-block text-uppercase" 
+href="/login/google"><i class="fab fa-google mr-2"></i> Sign up with Google</a>
+<button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit">
+    <i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button> -->
+
+    <a href="{{ url('/auth/google') }}" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
+     <a href="{{ url('/auth/github') }}" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
+     <a href="{{ url('/auth/twitter') }}" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+     <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+
+
                                 </form>
                             </div>
                         </div>
