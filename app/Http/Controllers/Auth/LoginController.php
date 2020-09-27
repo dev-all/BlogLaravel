@@ -61,7 +61,7 @@ class LoginController extends Controller
     public function handleProviderCallback($provider)
     {
         try{
-            $user = Socialite::driver($provider)->user();
+            $user = Socialite::driver($provider)->stateless()->user();
         } catch (\GuzzleHttp\Exception\ClientException $e) {
             abort(403, 'Unauthorized action.');
             return redirect()->to('/');
